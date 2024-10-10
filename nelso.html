@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro</title>
+    <style>
+        body {
+            background-color: #cac98a;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            padding: 20px;
+            
+        }
+
+        a{
+            text-decoration: none;
+        }
+        h1 {
+            color: #ff3366;
+        }
+
+        .heart {
+            font-size: 50px;
+            color: #ff3366;
+            cursor: pointer;
+        }
+
+        #nao {
+            font-size: 22px;
+            color: #333;
+            background-color: #cac98a;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Eu tim amo</h1>
+        <p>Olá pictchuca ❤️</p>
+        <p>Quero dizer que quero você pra sempre, quero passar minha vida ao lado da sua, eu te sinto.</p>
+        <p>Você ainda aceita ter 13 pictchucos comigo?</p>
+        <p class="heart" onclick="mostrarResposta()"><a href="https://youtu.be/lF6pP0UfK6w">❤️</a></p>
+        <button id="nao" onmouseover="mudarPosicao()">Não</button>
+        <p id="resposta" style="display: none;"></p>
+    </div>
+    <script>
+        function mostrarResposta() {
+            document.getElementById('resposta').style.display = 'block';
+            document.getElementById('resposta').innerHTML = '<a href="https://youtu.be/lF6pP0UfK6w"></a>';
+        }
+
+        function mudarPosicao() {
+            const buttonNao = document.getElementById('nao');
+            const randomX = Math.floor(Math.random() * window.innerWidth);
+            const randomY = Math.floor(Math.random() * window.innerHeight);
+            buttonNao.style.left = `${randomX}px`;
+            buttonNao.style.top = `${randomY}px`;
+        }
+    </script>
+</body>
+</html>
